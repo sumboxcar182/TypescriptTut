@@ -1,7 +1,12 @@
-﻿function greeter(person) {
-    return "Hello, " + person;
+﻿function greeter(person: Person) {
+    return "Hello, " + person.firstName + " " + person.lastName;
 }
 
-var user = "Jane User";
+interface Person {
+    firstName: string;
+    lastName: string;
+}
+
+var user = { firstName: "Jane", lastName: "User" };
 
 document.body.innerHTML = greeter(user);
